@@ -37,7 +37,12 @@ ul {
     padding: 0 30px;
     opacity: 1;
 }
-.main-content{
+
+.hidden {
+    display: none !important;
+}
+
+.main-content {
     padding-left: 270px;
 
 }
@@ -53,6 +58,43 @@ ul {
     margin: auto;
 }
 
+.section .container {
+    padding-top: 60px;
+    padding-bottom: 70px;
+}
+
+.section-title {
+    flex: 0 0 100%;
+    max-width: 100%;
+}
+
+.section-title h2 {
+    font-size: 40px;
+    color: var(--text-black-900);
+    font-weight: 700;
+    position: relative;
+}
+
+.section-title h2::before {
+    content: '';
+    height: 4px;
+    width: 50px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+}
+.section-title h2::after {
+    content: '';
+    height: 4px;
+    width: 25px;
+    background-color: var(--skin-color);
+    position: absolute;
+    top: 100%;
+    left: 0;
+    margin-top: 8px;
+}
+
 .row {
     display: flex;
     flex-wrap: wrap;
@@ -60,7 +102,8 @@ ul {
     margin-left: -15px;
     position: relative;
 }
-.btn{
+
+.btn {
     font-size: 16px;
     font-weight: 500;
     padding: 12px 35px;
@@ -73,7 +116,7 @@ ul {
     background: var(--skin-color);
 }
 
-.btn:hover{
+.btn:hover {
     transform: scale(1.05);
 }
 
@@ -207,39 +250,45 @@ ul {
 }
 
 /* home */
-.home{
+.home {
     min-height: 100vh;
     display: flex;
     color: var(--text-black-900);
 }
-.home .home-info{
+
+.home .home-info {
     flex: 0 0 60%;
     max-width: 60%;
 }
-h3.hello{
+
+h3.hello {
     font-size: 28px;
     margin: 15px 0;
 }
-h3.hello span{
-    font-family: 'Clicker Script' , cursive;
+
+h3.hello span {
+    font-family: 'Clicker Script', cursive;
     font-size: 30px;
     font-weight: 700;
     color: var(--skin-color);
 }
-h3.my-profession
-{
+
+h3.my-profession {
     font-size: 30px;
     margin: 15px 0;
 }
-.typing{
+
+.typing {
     color: var(--skin-color);
 }
-.home-info p{
+
+.home-info p {
     margin-bottom: 70px;
     font-size: 20px;
     color: var(--text-black-700);
 }
-.home-img::after{
+
+.home-img::after {
     content: '';
     position: absolute;
     height: 80px;
@@ -249,7 +298,8 @@ h3.my-profession
     right: 20px;
     bottom: -40px;
 }
-.home-img::before{
+
+.home-img::before {
     content: '';
     position: absolute;
     height: 80px;
@@ -259,12 +309,14 @@ h3.my-profession
     left: -20px;
     top: -40px;
 }
-.home .home-img{
+
+.home .home-img {
     flex: 0 0 40%;
     max-width: 40%;
     text-align: center;
     position: relative;
 }
+
 .home .home-img img {
     margin: auto;
     border-radius: 5px;
