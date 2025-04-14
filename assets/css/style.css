@@ -156,6 +156,7 @@ ul {
     white-space: nowrap;
     border: none;
     background: var(--skin-color);
+    cursor: pointer;
 }
 
 .btn:hover {
@@ -909,4 +910,7 @@ body.dark .social-link:hover {
 }
 .main-container {
     flex: 1 0 auto;
+}
+#invisible{
+    opacity: 0;
 }

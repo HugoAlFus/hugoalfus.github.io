@@ -342,33 +342,38 @@
                 </div>
                 <h3 class="contact-title padd-15">Contáctame por correo</h3>
                 <!-- ===== Contact Form ===== -->
-                <form id="form-validation" novalidate autocomplete="off">
-
+                <form id="form">
                     <div class="row">
                         <div class="contact-form padd-15">
                             <div class="row">
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="name" placeholder="Nombre">
+                                        <label>
+                                            <input type="text" class="form-control" name="name" placeholder="Nombre">
+                                        </label>
                                     </div>
                                 </div>
                                 <div class="form-item col-6 padd-15">
                                     <div class="form-group">
-                                        <input type="email" class="form-control" name="email" placeholder="Correo electrónico">
+                                        <label>
+                                            <input type="email" class="form-control" name="email" placeholder="Correo electrónico" required>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
-                                        <input type="text" class="form-control" name="asunto" placeholder="Asunto">
+                                        <label>
+                                            <input type="text" class="form-control" name="asunto" placeholder="Asunto" required>
+                                        </label>
                                     </div>
                                 </div>
                             </div>
                             <div class="row">
                                 <div class="form-item col-12 padd-15">
                                     <div class="form-group">
-                                        <textarea name="asunto" class="form-control" id="" placeholder="Mensaje"></textarea>
+                                        <label for=""></label><textarea name="mensaje" class="form-control" id="" placeholder="Mensaje" required></textarea>
                                     </div>
                                 </div>
                             </div>
@@ -376,6 +381,7 @@
                                 <div class="form-item col-12 padd-15">
                                     <button type="submit" class="btn">Enviar mensaje</button>
                                 </div>
+                                <a href="mailto:hugalmodovarfus@gmail.com" id="invisible"></a>
                             </div>
                         </div>
                     </div>
@@ -425,6 +431,7 @@
         integrity="sha512-+2pW8xXU/rNr7VS+H62aqapfRpqFwnSQh9ap6THjsm41AxgA0MhFRtfrABS+Lx2KHJn82UOrnBKhjZOXpom2LQ=="
         crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 <script src="assets/js/script.js"></script>
+<script src="assets/js/form.js"></script>
 <script src="assets/js/style-switcher.js"></script>
 </body>
 </html>
