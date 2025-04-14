@@ -7,7 +7,10 @@
     --text-black-900: #30234d;
     --text-black-700: #504e70;
 }
-
+/* Añade estas reglas al principio del CSS */
+html, body {
+    height: 100%;
+}
 body.dark {
     --bg-black-900: #151515;
     --bg-black-100: #222222;
@@ -20,6 +23,8 @@ body {
     line-height: 1.5;
     font-size: 16px;
     font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
 }
 
 * {
@@ -53,6 +58,7 @@ ul {
     overflow-y: auto;
     overflow-x: hidden;
     transition: all 0.3s ease;
+
 }
 
 .section.back-section {
@@ -853,4 +859,54 @@ h3.my-profession {
         max-width: 100%;
     }
 
+}
+/* ===== Footer ===== */
+.footer {
+    background: var(--bg-black-100);
+    padding: 8px 8px; /* Reducido de 20px */
+    text-align: center;
+    border-top: 1px solid var(--bg-black-50);
+    margin-top: auto;
+    position: relative;
+    z-index: 2;
+}
+.social-links {
+    display: flex;
+    justify-content: center;
+    gap: 15px; /* Reducido de 20px */
+    margin-bottom: 10px; /* Reducido de 15px */
+}
+.social-link {
+    color: var(--text-black-900); /* Color principal del tema */
+    transition: all 0.3s ease;
+    width: 38px;
+    height: 38px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--bg-black-50); /* Fondo sutil */
+}
+
+.social-link:hover {
+    color: var(--skin-color) !important; /* Color de acento al hover */
+    transform: translateY(-3px);
+    background: var(--bg-black-100);
+}
+
+.social-link i {
+    font-size: 1.2rem; /* Tamaño consistente para todos los íconos */
+}
+
+/* Asegurar colores en modo oscuro */
+body.dark .social-link {
+    color: var(--text-black-700); /* Color más claro en modo oscuro */
+    background: var(--bg-black-900);
+}
+
+body.dark .social-link:hover {
+    color: var(--skin-color) !important;
+}
+.main-container {
+    flex: 1 0 auto;
 }
