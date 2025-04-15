@@ -21,26 +21,40 @@ const nav = document.querySelector(".nav"),
     totalNavList = navlist.length,
     allSection = document.querySelectorAll(".section"),
     totalSection = allSection.length;
-for (let i = 0; i < totalSection; i++) {
-    allSection[i].classList.remove("back-section");
-}
-for (let i = 0; i < totalNavList; i++) {
 
+let currentActive = document.querySelector('.section.active'); // Guardar sección activa inicial
+
+for (let i = 0; i < totalNavList; i++) {
     const a = navlist[i].querySelector("a");
-    a.addEventListener("click", function () {
-        for (let j = 0; j < totalNavList; j++) {
-            if (navlist[j].querySelector("a").classList.contains("active")) {
-                allSection[j].classList.add("back-section")
-            }
-            navlist[j].querySelector("a").classList.remove("active");
-        }
+    a.addEventListener("click", function(e) {
+        e.preventDefault();
+
+        // Remover clases activas
+        navlist.forEach(item => item.querySelector("a").classList.remove("active"));
+        allSection.forEach(section => {
+            section.classList.remove("active", "back-section");
+        });
+
+        // Nueva sección activa
         this.classList.add("active");
-        showSection(this);
-        if(window.innerWidth < 1200){
-            asideSectionTogglerBtn()
+        const target = this.getAttribute("href").substring(1);
+        const newActive = document.getElementById(target);
+
+        // Manejar back-section
+        if(currentActive && currentActive !== newActive) {
+            currentActive.classList.add("back-section");
         }
-    })
+
+        newActive.classList.add("active");
+        currentActive = newActive; // Actualizar referencia
+
+        if (window.innerWidth < 1200) {
+            asideSectionTogglerBtn();
+        }
+    });
 }
+
+// Resto del código sin cambios...
 
 function showSection(element) {
 
